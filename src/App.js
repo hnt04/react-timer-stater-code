@@ -1,4 +1,4 @@
-import "Your code here";
+import React, {useTimer} from "react";
 import useTimer from "./useTimer";
 
 function App() {
