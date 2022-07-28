@@ -12,12 +12,14 @@ const useTimer = (ini = 0) => {
       isStart.current++;
       setTime(prev => prev + 1)
     }, 1000)
-    active.current.disabled = true;
+    active.current = true;
   };
+
   const stopTimer = () => {
     clearInterval(refInterval.current);
     refInterval.current = 0
   };
+  
   const resetTimer = () => {
     stopTimer();
     if(time) {
