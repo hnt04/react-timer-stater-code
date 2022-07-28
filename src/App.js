@@ -4,7 +4,7 @@ import useTimer from "./useTimer";
 function App() {
   const { time, startTimer, stopTimer, resetTimer, active } = useTimer(0);
 
-  const formatTime = () => {
+  const formatTime = (time) => {
     const getSeconds = `0${(time % 60)}.slide(-2)`
     const minutes = `${Math.floor(time/60)}`
     const getMinutes = `${minutes % 60}.slide(-2)`
@@ -18,7 +18,7 @@ function App() {
       <h1>Coder Timer</h1>
       <div className="timer__wrapper">
         <div className="timer__display">
-          <p>{formatTime}</p>
+          <p>{formatTime(time)}</p>
         </div>
         <div className="button__wrapper">
           <button className="button" onClick={stopTimer}>
