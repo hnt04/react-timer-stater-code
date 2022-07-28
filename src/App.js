@@ -5,9 +5,9 @@ function App() {
   const { time, startTimer, stopTimer, resetTimer, active } = useTimer(0);
 
   const formatTime = (time) => {
-    const getSeconds = `0${(time % 60)}.slide(-2)`
+    const getSeconds = `0${(time % 60)}`.slide(-2)
     const minutes = `${Math.floor(time/60)}`
-    const getMinutes = `${minutes % 60}.slide(-2)`
+    const getMinutes = `${minutes % 60}`.slide(-2)
     const getHours = `0${Math.floor(time/3600)}`
 
     return `${getHours} : ${getMinutes} : ${getSeconds}`
