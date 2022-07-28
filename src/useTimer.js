@@ -4,7 +4,7 @@ const useTimer = (ini = 0) => {
   const [time, setTime] = useState(ini);
 
   const isStart = useRef(0);
-  const active = useRef(true);
+  const active = useRef(false);
   const refInterval = useRef();
 
   const startTimer = () => {
