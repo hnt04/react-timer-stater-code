@@ -3,7 +3,7 @@ import { useState, useRef } from "react";
 const useTimer = (ini = 0) => {
   const [time, setTime] = useState(ini);
 
-  const isStart = useRef(0);
+  const isStart = useRef("0:00:00");
   const active = useRef(true);
   const refInterval = useRef();
 
